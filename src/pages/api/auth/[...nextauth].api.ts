@@ -25,9 +25,9 @@ export function buildNextAuthOptions(
             name: profile.name,
             username: '',
             email: profile.email,
-            avatar_url: profile.picture
+            avatar_url: profile.picture,
           }
-        }
+        },
       }),
     ],
 
