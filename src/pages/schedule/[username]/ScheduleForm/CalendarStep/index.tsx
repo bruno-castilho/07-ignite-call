@@ -14,11 +14,13 @@ export function CalendarStep() {
 
   const isDateSelected = !!selectedDate
 
-  const weekDay = selectedDate ? dayjs(selectedDate).format('dddd'): null
-  const describedDate = selectedDate ? dayjs(selectedDate).format('DD[ de ]MMMM'): null
+  const weekDay = selectedDate ? dayjs(selectedDate).format('dddd') : null
+  const describedDate = selectedDate
+    ? dayjs(selectedDate).format('DD[ de ]MMMM')
+    : null
   return (
     <Container isTisTimePickerOpen={isDateSelected}>
-      <Calendar selectedDate={selectedDate} onDateSelected={setSelectedDate}/>
+      <Calendar selectedDate={selectedDate} onDateSelected={setSelectedDate} />
       {isDateSelected && (
         <TimePicker>
           <TimePickerHeader>
