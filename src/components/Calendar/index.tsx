@@ -22,7 +22,7 @@ export function Calendar() {
           <button title="Previous month">
             <CaretLeft />
           </button>
-          <button  title="Next month">
+          <button title="Next month">
             <CaretRight />
           </button>
         </CalendarActions>
@@ -36,9 +36,7 @@ export function Calendar() {
             ))}
           </tr>
         </thead>
-        <tbody>
-
-        </tbody>
+        <tbody></tbody>
       </CalendarBody>
     </CalendarContainer>
   )

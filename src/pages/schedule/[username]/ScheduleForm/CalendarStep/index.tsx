@@ -17,6 +17,7 @@ export function CalendarStep() {
           <TimePickerHeader>
             terçã-feira <span>20 de setembro</span>
           </TimePickerHeader>
+
           <TimePickerList>
             <TimePickerItem>08:00h</TimePickerItem>
             <TimePickerItem>09:00h</TimePickerItem>
