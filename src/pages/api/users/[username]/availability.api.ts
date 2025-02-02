@@ -1,7 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import dayjs from 'dayjs'
-import { availableMemory } from 'process'
 
 export default async function handler(
   req: NextApiRequest,
