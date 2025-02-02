@@ -5,7 +5,7 @@ import { object, z } from 'zod'
 import { prisma } from '@/lib/prisma'
 
 const updateProfileBodySchema = z.object({
-    bio: z.string(),
+  bio: z.string(),
 })
 
 export default async function handler(
@@ -25,12 +25,12 @@ export default async function handler(
   const { bio } = updateProfileBodySchema.parse(req.body)
 
   await prisma.user.update({
-    where:{
-        id: session.user.id,
+    where: {
+      id: session.user.id,
     },
     data: {
-        bio
-    }
+      bio,
+    },
   })
 
   return res.status(204).end()
