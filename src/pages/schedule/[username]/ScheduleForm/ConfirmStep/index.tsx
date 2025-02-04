@@ -35,14 +35,16 @@ export function ConfirmStep({
     resolver: zodResolver(confirmFormSchema),
   })
 
-
   const router = useRouter()
   const username = String(router.query.username)
 
   async function handleConfirmScheduling(data: ConfirmFormData) {
-    const {email, name, observations} = data 
+    const { email, name, observations } = data
     await api.post(`/users/${username}/schedule`, {
-      name, email, observations, date: schedulingDate
+      name,
+      email,
+      observations,
+      date: schedulingDate,
     })
 
     onCancelConfirmation()
